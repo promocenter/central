@@ -372,6 +372,17 @@
             },
         });
     </script>
+    <script>
+        fetch('https://promocenter-bot.criandoumamenterica.com.br/api/track-visit', {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json'
+            },
+            body: JSON.stringify({
+                page: 'landing-promocenter-github'
+            })
+        });
+    </script>
 </body>
 
 </html>
