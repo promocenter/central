@@ -58,13 +58,17 @@
         }
 
         .header {
-            background: #4FC299;
-            padding: 18px;
+            background: #3b9475;
+            padding: 20px;
             text-align: center;
-            color: #000;
+            color: #fff;
             font-weight: 700;
-            font-size: 16px;
+            font-size: 20px;
             text-transform: uppercase;
+        }
+
+        .header .emoji {
+            font-size: 22px;
         }
 
         .container {
@@ -113,20 +117,26 @@
             gap: 15px;
         }
 
-        .buttons button {
+        .buttons .btn-whats {
             width: 100%;
-            padding: 14px;
+            padding: 18px;
             font-weight: 500;
             font-size: 1rem;
             border: none;
             border-radius: 8px;
             color: #fff;
             cursor: pointer;
-            transition: background .3s;
+            transition: background .2s;
+            text-decoration: none;
         }
 
         .btn-whats {
+            margin-top: 20px;
             background: #00C050;
+        }
+
+        .btn-whats:hover {
+            background: #109246;
         }
 
         .btn-telegram {
@@ -181,7 +191,7 @@
 
         .btn-whats {
             background: #0ea34c;
-            animation: pulse 1.4s infinite ease-in-out;
+            /* animation: pulse 3s infinite ease-in-out; */
         }
 
         @keyframes pulse {
@@ -237,7 +247,7 @@
         /* Slider */
         .swiper {
             width: 100%;
-            margin-top: 30px;
+            margin-top: 10px;
         }
 
         .swiper-slide {
@@ -251,6 +261,10 @@
         }
 
         @media(max-width: 500px) {
+            .header {
+                font-size: 16px;
+            }
+
             .swiper-slide {
                 height: 600px;
             }
@@ -272,7 +286,7 @@
 <body>
     <div class="header">
         <span class="emoji">👇</span>
-        Vagas gratuitas ilimitadas
+        Quer Comprar Barato?
         <span class="emoji">👇</span>
     </div>
 
@@ -286,8 +300,9 @@
 
             <div class="text">
                 <h2 class="title-main">
-                    🔥 Receba as <span>Melhores Ofertas</span> das <br>
-                    <span>Melhores Lojas</span> direto no celular
+                    <!-- 🔥 Receba as <span>Melhores Ofertas</span> das <br>
+                    <span>Melhores Lojas</span> direto no celular -->
+                    Postamos promoções das melhores lojas do Brasil!
                 </h2>
                 <br>
 
@@ -317,10 +332,9 @@
 
 
             <div class="buttons">
-                <a href="https://chat.whatsapp.com/GUjaqIUEruR4RHeVv8ZSjY?mode=hqrt2">
-                    <button class="btn-whats">
-                        👉 ENTRAR NO <strong>PROMOCENTER</strong> AGORA
-                    </button>
+                <a href="https://chat.whatsapp.com/GUjaqIUEruR4RHeVv8ZSjY?mode=hqrt2" class="btn-whats"
+                    data-element="whatsapp-top" data-page="landing-promocenter" target="_blank">
+                    ENTRE NO <strong>GRUPO DO WHATSAPP</strong> AGORA
                 </a>
                 <!-- <a href="https://t.me/promocenterofc">
                     <button class="btn-telegram">Canal do Telegram</button>
@@ -329,7 +343,7 @@
 
             <div class="vagas">
                 <span id="vaga-header">
-                    <strong>⌛ Últimas vagas disponíveis hoje</strong>
+                    <strong>Veja como pode economizar 👇</strong>
                 </span>
             </div>
 
@@ -377,6 +391,17 @@
                     </div>
                 </div>
             </div>
+
+
+            <div class="buttons" style="margin-bottom:20px">
+                <a href="https://chat.whatsapp.com/GUjaqIUEruR4RHeVv8ZSjY?mode=hqrt2" class="btn-whats"
+                    data-element="whatsapp-bottom" data-page="landing-promocenter" target="_blank">
+                    ENTRE NO <strong>GRUPO DO WHATSAPP</strong> E <strong>ECONOMIZE</strong> AGORA
+                </a>
+                <!-- <a href="https://t.me/promocenterofc">
+                    <button class="btn-telegram">Canal do Telegram</button>
+                </a> -->
+            </div>
         </div>
     </main>
 
@@ -409,7 +434,10 @@
         });
     </script>
     <script>
-        fetch('https://promocenter-bot.criandoumamenterica.com.br/api/track-visit', {
+        const BASEAPI = 'https://promocenter-bot.criandoumamenterica.com.br/api';
+        // const BASEAPI = 'http://127.0.0.1:8000/api';
+
+        fetch(`${BASEAPI}/track-visit`, {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json'
@@ -417,6 +445,21 @@
             body: JSON.stringify({
                 page: 'landing-promocenter-github'
             })
+        });
+
+        document.querySelectorAll('.btn-whats').forEach(function (btn) {
+            btn.addEventListener('click', function () {
+                fetch(`${BASEAPI}/click`, {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json',
+                    },
+                    body: JSON.stringify({
+                        element: btn.dataset.element || 'whatsapp-button',
+                        page: btn.dataset.page || 'landing'
+                    })
+                });
+            });
         });
     </script>
 </body>

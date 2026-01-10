@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Redirecionando...</title>
+</head>
+
+<body>
+
+    <p>Redirecionando, aguarde...</p>
+
+    <script>
+        const redirectUrl = 'https://chat.whatsapp.com/GUjaqIUEruR4RHeVv8ZSjY?mode=hqrt2';
+        const BASEAPI = 'https://promocenter-bot.criandoumamenterica.com.br/api';
+        // const BASEAPI = 'http://127.0.0.1:8000/api';
+
+        fetch(`${BASEAPI}/click`, {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json',
+            },
+            body: JSON.stringify({
+                element: 'auto-redirect',
+                page: 'redirect-whatsapp'
+            })
+        }).finally(() => {
+            window.location.href = redirectUrl;
+        });
+    </script>
+
+</body>
+
+</html>
