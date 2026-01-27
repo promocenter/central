@@ -15,6 +15,8 @@
         href="https://fonts.googleapis.com/css2?family=Albert+Sans:ital,wght@0,100..900;1,100..900&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
         rel="stylesheet">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+
 
     <style>
         * {
@@ -34,13 +36,26 @@
                     #012c7a,
                     #0057ff);
             background-size: 200% 200%;
-            animation: gradientMove 1s ease infinite;
+            /* animation: gradientMove 10s ease infinite; */
             background-size: cover;
             background-position: center;
             background-repeat: no-repeat;
             background-blend-mode: multiply;
             min-height: 100vh;
             position: relative;
+            letter-spacing: 0.5px;
+        }
+
+        .badge {
+            background: #fff3cd;
+            color: #856404;
+            padding: 5px 15px;
+            border-radius: 50px;
+            font-size: 12px;
+            font-weight: bold;
+            display: inline-block;
+            margin-bottom: 15px;
+            margin-top: 15px;
         }
 
         @keyframes gradientMove {
@@ -63,7 +78,7 @@
             text-align: center;
             color: #fff;
             font-weight: 700;
-            font-size: 20px;
+            font-size: 18px;
             text-transform: uppercase;
         }
 
@@ -84,8 +99,8 @@
         }
 
         .logo {
-            width: 150px;
-            height: 150px;
+            width: 100px;
+            height: 100px;
             border-radius: 50%;
             overflow: hidden;
             margin: 10px 0;
@@ -111,7 +126,7 @@
         }
 
         .buttons {
-            margin-top: 25px;
+            margin-top: 20px;
             display: flex;
             flex-direction: column;
             gap: 15px;
@@ -128,6 +143,12 @@
             cursor: pointer;
             transition: background .2s;
             text-decoration: none;
+        }
+
+        .buttons .btn-whats i {
+            font-size: 1.3rem;
+            margin-right: 6px;
+            margin-bottom: 0 !important;
         }
 
         .btn-whats {
@@ -191,7 +212,7 @@
 
         .btn-whats {
             background: #0ea34c;
-            /* animation: pulse 3s infinite ease-in-out; */
+            animation: pulse 3s infinite ease-in-out;
         }
 
         @keyframes pulse {
@@ -222,25 +243,23 @@
             justify-content: center;
             gap: 20px;
             margin-top: 15px;
-            margin-bottom: 15px;
         }
 
         .logo-lojas {
-            width: 60px;
-            height: 60px;
+            width: 55px;
+            height: 55px;
             border-radius: 50%;
-            border: 0px solid rgb(0, 0, 0);
             background: rgb(255, 255, 255);
             display: flex;
             align-items: center;
             justify-content: center;
-            overflow: hidden;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
         }
 
         .logo-lojas img {
             width: 100%;
             height: 100%;
-            object-fit: cover;
+            object-fit: contain;
         }
 
 
@@ -280,127 +299,145 @@
         .title-main span {
             color: orange;
         }
+
+        .text {
+            margin-top: 20px;
+            padding: 0 10px;
+        }
+
+        .title-main {
+            font-size: 16px;
+            /* Aumentei um pouco */
+            line-height: 1.5;
+            font-weight: 500;
+            color: #e0e0e0;
+            /* Um branco levemente cinza para não cansar */
+        }
+
+        .title-main span {
+            font-size: 20px;
+            font-weight: 800;
+            color: #fff;
+            /* display: block; */
+            /* margin-bottom: 5px; */
+        }
+
+        .marcas-destaque {
+            background: rgba(255, 255, 255, 0.1);
+            padding: 8px;
+            border-radius: 8px;
+            margin-top: 10px;
+            font-size: 13px;
+            letter-spacing: 1px;
+        }
     </style>
 </head>
 
 <body>
     <div class="header">
-        <span class="emoji">👇</span>
-        Quer Comprar Barato?
-        <span class="emoji">👇</span>
+        Economize <span
+            style="background-color: #ffe100; color: #fff; padding: 2px 8px; border-radius: 4px; font-weight: 800;">até
+            70%</span> em suas compras online!
     </div>
 
     <main>
-        <div class="container">
+        <div class=" container">
             <div class="logo-wrapper">
                 <div class="logo">
                     <img src="./promocenter.png" alt="PromoCenter Logo">
                 </div>
             </div>
 
-            <div class="text">
-                <h2 class="title-main">
-                    <!-- 🔥 Receba as <span>Melhores Ofertas</span> das <br>
-                    <span>Melhores Lojas</span> direto no celular -->
-                    Postamos promoções das melhores lojas do Brasil!
-                </h2>
-                <br>
+            <div class="badge"><i class="fas fa-bolt"></i> OFERTAS ATIVAS AGORA</div>
 
+            <div class="text">
+                <h4 class="title-main">
+                    Participe do nosso <span>Grupo VIP</span> e receba as melhores ofertas de:
+                </h4>
                 <div class="logos-lojas">
                     <div class="logo-lojas">
-                        <a href="https://chat.whatsapp.com/GUjaqIUEruR4RHeVv8ZSjY?mode=hqrt2">
-                            <img src="./shopee.png" alt="Shopee">
-                        </a>
-                    </div>
-                    <div class="logo-lojas">
-                        <a href="https://chat.whatsapp.com/GUjaqIUEruR4RHeVv8ZSjY?mode=hqrt2">
+                        <a href="https://chat.whatsapp.com/GUjaqIUEruR4RHeVv8ZSjY?mode=hqrt2" class="action-button"
+                            data-element="whatsapp-logos-marcas-ml" data-page="landing-promocenter">
                             <img src="./mercadolivre.webp" alt="Mercado Livre">
                         </a>
                     </div>
                     <div class="logo-lojas">
-                        <a href="https://chat.whatsapp.com/GUjaqIUEruR4RHeVv8ZSjY?mode=hqrt2">
-                            <img src="./amazon.webp" alt="Amazon">
+                        <a href="https://chat.whatsapp.com/GUjaqIUEruR4RHeVv8ZSjY?mode=hqrt2" class="action-button"
+                            data-element="whatsapp-logos-marcas-shopee" data-page="landing-promocenter">
+                            <img src="./shopee.png" alt="Shopee">
                         </a>
                     </div>
                     <div class="logo-lojas">
-                        <a href="https://chat.whatsapp.com/GUjaqIUEruR4RHeVv8ZSjY?mode=hqrt2">
-                            <img src="./magalu.webp" alt="Magalu">
+                        <a href="https://chat.whatsapp.com/GUjaqIUEruR4RHeVv8ZSjY?mode=hqrt2" class="action-button"
+                            data-element="whatsapp-logos-marcas-amazon" data-page="landing-promocenter">
+                            <img src="./amazon.webp" alt="Amazon">
                         </a>
                     </div>
                 </div>
+                <div style="margin-top: 15px; font-size: 13px; color: #d1d1d1;">
+                    <i class="fas fa-check"></i> Ofertas de imperdíveis • <i class="fas fa-check"></i> Lojas Oficiais • <i class="fas fa-shield-alt"></i> 100% SEGURO
+                </div>
             </div>
 
-
             <div class="buttons">
-                <a href="https://chat.whatsapp.com/GUjaqIUEruR4RHeVv8ZSjY?mode=hqrt2" class="btn-whats"
-                    data-element="whatsapp-top" data-page="landing-promocenter" target="_blank">
-                    ENTRE NO <strong>GRUPO DO WHATSAPP</strong> AGORA
+                <a href="https://chat.whatsapp.com/GUjaqIUEruR4RHeVv8ZSjY?mode=hqrt2" class="btn-whats action-button"
+                    data-element="whatsapp-top" data-page="landing-promocenter">
+                    <i class="fab fa-whatsapp"></i>
+                    ENTRAR NO <strong>GRUPO DO WHATSAPP</strong>
                 </a>
-                <!-- <a href="https://t.me/promocenterofc">
-                    <button class="btn-telegram">Canal do Telegram</button>
-                </a> -->
             </div>
 
             <div class="vagas">
                 <span id="vaga-header">
-                    <strong>Veja como pode economizar 👇</strong>
+                    <strong>👇 Promoções que está perdendo 👇</strong>
                 </span>
             </div>
 
             <div class="swiper mySwiper">
                 <div class="swiper-wrapper">
                     <div class="swiper-slide">
-                        <a href="https://chat.whatsapp.com/GUjaqIUEruR4RHeVv8ZSjY?mode=hqrt2">
-                            <img src="./1.jpeg" alt="Grupo VIP PromoCenter">
+                        <a href="https://chat.whatsapp.com/GUjaqIUEruR4RHeVv8ZSjY?mode=hqrt2" class="action-button"
+                            data-element="whatsapp-slider-1" data-page="landing-promocenter">
+                            <img src="./1.png" alt="Grupo VIP PromoCenter">
                         </a>
                     </div>
                     <div class="swiper-slide">
-                        <a href="https://chat.whatsapp.com/GUjaqIUEruR4RHeVv8ZSjY?mode=hqrt2">
-                            <img src="./2.jpeg" alt="Grupo VIP PromoCenter">
+                        <a href="https://chat.whatsapp.com/GUjaqIUEruR4RHeVv8ZSjY?mode=hqrt2" class="action-button"
+                            data-element="whatsapp-slider-6" data-page="landing-promocenter">
+                            <img src="./6.png" alt="Grupo VIP PromoCenter">
                         </a>
                     </div>
                     <div class="swiper-slide">
-                        <a href="https://chat.whatsapp.com/GUjaqIUEruR4RHeVv8ZSjY?mode=hqrt2">
-                            <img src="./3.jpeg" alt="Grupo VIP PromoCenter">
+                        <a href="https://chat.whatsapp.com/GUjaqIUEruR4RHeVv8ZSjY?mode=hqrt2" class="action-button"
+                            data-element="whatsapp-slider-3" data-page="landing-promocenter">
+                            <img src="./3.png" alt="Grupo VIP PromoCenter">
                         </a>
                     </div>
                     <div class="swiper-slide">
-                        <a href="https://chat.whatsapp.com/GUjaqIUEruR4RHeVv8ZSjY?mode=hqrt2">
-                            <img src="./4.jpeg" alt="Grupo VIP PromoCenter">
+                        <a href="https://chat.whatsapp.com/GUjaqIUEruR4RHeVv8ZSjY?mode=hqrt2" class="action-button"
+                            data-element="whatsapp-slider-4" data-page="landing-promocenter">
+                            <img src="./4.png" alt="Grupo VIP PromoCenter">
                         </a>
                     </div>
                     <div class="swiper-slide">
-                        <a href="https://chat.whatsapp.com/GUjaqIUEruR4RHeVv8ZSjY?mode=hqrt2">
-                            <img src="./5.jpeg" alt="Grupo VIP PromoCenter">
+                        <a href="https://chat.whatsapp.com/GUjaqIUEruR4RHeVv8ZSjY?mode=hqrt2" class="action-button"
+                            data-element="whatsapp-slider-5" data-page="landing-promocenter">
+                            <img src="./5.png" alt="Grupo VIP PromoCenter">
                         </a>
                     </div>
                     <div class="swiper-slide">
-                        <a href="https://chat.whatsapp.com/GUjaqIUEruR4RHeVv8ZSjY?mode=hqrt2">
-                            <img src="./6.jpeg" alt="Grupo VIP PromoCenter">
+                        <a href="https://chat.whatsapp.com/GUjaqIUEruR4RHeVv8ZSjY?mode=hqrt2" class="action-button"
+                            data-element="whatsapp-slider-2" data-page="landing-promocenter">
+                            <img src="./2.png" alt="Grupo VIP PromoCenter">
                         </a>
                     </div>
                     <div class="swiper-slide">
-                        <a href="https://chat.whatsapp.com/GUjaqIUEruR4RHeVv8ZSjY?mode=hqrt2">
-                            <img src="./7.jpeg" alt="Grupo VIP PromoCenter">
-                        </a>
-                    </div>
-                    <div class="swiper-slide">
-                        <a href="https://chat.whatsapp.com/GUjaqIUEruR4RHeVv8ZSjY?mode=hqrt2">
-                            <img src="./8.jpeg" alt="Grupo VIP PromoCenter">
+                        <a href="https://chat.whatsapp.com/GUjaqIUEruR4RHeVv8ZSjY?mode=hqrt2" class="action-button"
+                            data-element="whatsapp-slider-7" data-page="landing-promocenter">
+                            <img src="./7.png" alt="Grupo VIP PromoCenter">
                         </a>
                     </div>
                 </div>
-            </div>
-
-
-            <div class="buttons" style="margin-bottom:20px">
-                <a href="https://chat.whatsapp.com/GUjaqIUEruR4RHeVv8ZSjY?mode=hqrt2" class="btn-whats"
-                    data-element="whatsapp-bottom" data-page="landing-promocenter" target="_blank">
-                    ENTRE NO <strong>GRUPO DO WHATSAPP</strong> E <strong>ECONOMIZE</strong> AGORA
-                </a>
-                <!-- <a href="https://t.me/promocenterofc">
-                    <button class="btn-telegram">Canal do Telegram</button>
-                </a> -->
             </div>
         </div>
     </main>
@@ -411,9 +448,8 @@
         var swiper = new Swiper(".mySwiper", {
             slidesPerView: 3,
             spaceBetween: 30,
-            // loop: true,
             autoplay: {
-                delay: 2000,
+                delay: 3500,
                 disableOnInteraction: false,
             },
             pagination: {
@@ -447,7 +483,7 @@
             })
         });
 
-        document.querySelectorAll('.btn-whats').forEach(function (btn) {
+        document.querySelectorAll('.action-button').forEach(function (btn) {
             btn.addEventListener('click', function () {
                 fetch(`${BASEAPI}/click`, {
                     method: 'POST',
