@@ -5,23 +5,25 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-<!-- Meta Pixel Code -->
-<script>
-!function(f,b,e,v,n,t,s)
-{if(f.fbq)return;n=f.fbq=function(){n.callMethod?
-n.callMethod.apply(n,arguments):n.queue.push(arguments)};
-if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
-n.queue=[];t=b.createElement(e);t.async=!0;
-t.src=v;s=b.getElementsByTagName(e)[0];
-s.parentNode.insertBefore(t,s)}(window, document,'script',
-'https://connect.facebook.net/en_US/fbevents.js');
-fbq('init', '1789144685108886');
-fbq('track', 'PageView');
-</script>
-<noscript><img height="1" width="1" style="display:none"
-src="https://www.facebook.com/tr?id=1789144685108886&ev=PageView&noscript=1"
-/></noscript>
-<!-- End Meta Pixel Code -->
+    <!-- Meta Pixel Code -->
+    <script>
+        !function (f, b, e, v, n, t, s) {
+            if (f.fbq) return; n = f.fbq = function () {
+                n.callMethod ?
+                    n.callMethod.apply(n, arguments) : n.queue.push(arguments)
+            };
+            if (!f._fbq) f._fbq = n; n.push = n; n.loaded = !0; n.version = '2.0';
+            n.queue = []; t = b.createElement(e); t.async = !0;
+            t.src = v; s = b.getElementsByTagName(e)[0];
+            s.parentNode.insertBefore(t, s)
+        }(window, document, 'script',
+            'https://connect.facebook.net/en_US/fbevents.js');
+        fbq('init', '1789144685108886');
+        fbq('track', 'PageView');
+    </script>
+    <noscript><img height="1" width="1" style="display:none"
+            src="https://www.facebook.com/tr?id=1789144685108886&ev=PageView&noscript=1" /></noscript>
+    <!-- End Meta Pixel Code -->
 
     <link rel="shortcut icon" href="./promocenter.png" type="image/x-icon">
 
@@ -29,12 +31,8 @@ src="https://www.facebook.com/tr?id=1789144685108886&ev=PageView&noscript=1"
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 
-    <link
-        href="https://fonts.googleapis.com/css2?family=Albert+Sans:ital,wght@0,100..900;1,100..900&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
         rel="stylesheet">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.css" />
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
-
 
     <style>
         * {
@@ -53,41 +51,9 @@ src="https://www.facebook.com/tr?id=1789144685108886&ev=PageView&noscript=1"
                     #0a4682,
                     #012c7a,
                     #0057ff);
-            background-size: 200% 200%;
-            /* animation: gradientMove 10s ease infinite; */
-            background-size: cover;
-            background-position: center;
-            background-repeat: no-repeat;
-            background-blend-mode: multiply;
             min-height: 100vh;
             position: relative;
             letter-spacing: 0.5px;
-        }
-
-        .badge {
-            background: #fff3cd;
-            color: #856404;
-            padding: 5px 15px;
-            border-radius: 50px;
-            font-size: 12px;
-            font-weight: bold;
-            display: inline-block;
-            margin-bottom: 15px;
-            margin-top: 15px;
-        }
-
-        @keyframes gradientMove {
-            0% {
-                background-position: 0% 50%;
-            }
-
-            50% {
-                background-position: 100% 50%;
-            }
-
-            100% {
-                background-position: 0% 50%;
-            }
         }
 
         .header {
@@ -95,13 +61,9 @@ src="https://www.facebook.com/tr?id=1789144685108886&ev=PageView&noscript=1"
             padding: 20px;
             text-align: center;
             color: #fff;
-            font-weight: 700;
+            font-weight: bold;
             font-size: 18px;
             text-transform: uppercase;
-        }
-
-        .header .emoji {
-            font-size: 22px;
         }
 
         .container {
@@ -133,13 +95,13 @@ src="https://www.facebook.com/tr?id=1789144685108886&ev=PageView&noscript=1"
             color: #fff;
             font-size: 14px;
             margin-top: 5px;
-            font-weight: 600;
+            font-weight: bold;
         }
 
         .text {
             font-size: 14px;
             margin-top: 10px;
-            font-weight: 600;
+            font-weight: bold;
             color: #fff;
         }
 
@@ -161,76 +123,13 @@ src="https://www.facebook.com/tr?id=1789144685108886&ev=PageView&noscript=1"
             cursor: pointer;
             transition: background .2s;
             text-decoration: none;
-        }
-
-        .buttons .btn-whats i {
-            font-size: 1.3rem;
-            margin-right: 6px;
-            margin-bottom: 0 !important;
-        }
-
-        .btn-whats {
             margin-top: 20px;
-            background: #00C050;
+            background: #0ea34c;
+            animation: pulse 3s infinite ease-in-out;
         }
 
         .btn-whats:hover {
             background: #109246;
-        }
-
-        .btn-telegram {
-            background: #229ED9;
-        }
-
-        .vagas {
-            margin-top: 35px;
-            /* padding: 20px; */
-            color: #fff;
-            font-size: 18px;
-        }
-
-        #contador {
-            font-size: 40px;
-            font-weight: 700;
-        }
-
-        .vagas span {
-            display: block;
-            margin-top: 8px;
-        }
-
-        /* Notificações flutuantes */
-        .popup {
-            position: fixed;
-            right: 20px;
-            bottom: 20px;
-            background: #4FC299;
-            padding: 12px 16px;
-            border-radius: 10px;
-            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
-            font-size: 14px;
-            color: #000;
-            display: none;
-            font-weight: bold;
-            text-transform: uppercase;
-            animation: fadeIn 0.4s ease;
-        }
-
-        @keyframes fadeIn {
-            from {
-                opacity: 0;
-                transform: translateY(10px);
-            }
-
-            to {
-                opacity: 1;
-                transform: translateY(0);
-            }
-        }
-
-        .btn-whats {
-            background: #0ea34c;
-            animation: pulse 3s infinite ease-in-out;
         }
 
         @keyframes pulse {
@@ -280,38 +179,10 @@ src="https://www.facebook.com/tr?id=1789144685108886&ev=PageView&noscript=1"
             object-fit: contain;
         }
 
-
-        /* Slider */
-        .swiper {
-            width: 100%;
-            margin-top: 10px;
-        }
-
-        .swiper-slide {
-            height: 400px;
-            text-align: center;
-            font-size: 18px;
-            background: transparent;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-        }
-
         @media(max-width: 500px) {
             .header {
                 font-size: 16px;
             }
-
-            .swiper-slide {
-                height: 600px;
-            }
-        }
-
-        .swiper-slide img {
-            display: block;
-            width: 110%;
-            height: 117%;
-            object-fit: cover;
         }
 
         .title-main span {
@@ -325,48 +196,82 @@ src="https://www.facebook.com/tr?id=1789144685108886&ev=PageView&noscript=1"
 
         .title-main {
             font-size: 16px;
-            /* Aumentei um pouco */
             line-height: 1.5;
             font-weight: 500;
             color: #e0e0e0;
-            /* Um branco levemente cinza para não cansar */
         }
 
         .title-main span {
             font-size: 20px;
-            font-weight: 800;
+            font-weight: bold;
             color: #fff;
-            /* display: block; */
-            /* margin-bottom: 5px; */
         }
 
-        .marcas-destaque {
-            background: rgba(255, 255, 255, 0.1);
-            padding: 8px;
-            border-radius: 8px;
-            margin-top: 10px;
-            font-size: 13px;
-            letter-spacing: 1px;
+        .badge {
+            background: #fff3cd;
+            color: #856404;
+            padding: 5px 15px;
+            border-radius: 50px;
+            font-size: 12px;
+            font-weight: bold;
+            display: inline-block;
+            margin-bottom: 15px;
+            margin-top: 15px;
+        }
+
+        .badge {
+            position: relative;
+            overflow: hidden;
+        }
+
+        .badge::after {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: -75%;
+            width: 50%;
+            height: 100%;
+            background: linear-gradient(120deg,
+                    transparent,
+                    rgba(255, 255, 255, 0.6),
+                    transparent);
+            transform: skewX(-20deg);
+            animation: shine 3s infinite ease-in-out;
+        }
+
+        @keyframes shine {
+            0% {
+                left: -75%;
+            }
+
+            20% {
+                left: 125%;
+            }
+
+            100% {
+                left: 125%;
+            }
         }
     </style>
 </head>
 
 <body>
     <div class="header">
-        Economize <span
-            style="background-color: #ffe100; color: #fff; padding: 2px 8px; border-radius: 4px; font-weight: 800;">até
+        Economize
+        <span
+            style="background-color: #ffe100; color: #fff; padding: 2px 8px; border-radius: 4px; font-weight: bold;">até
             70%</span> em suas compras online!
     </div>
 
     <main>
-        <div class=" container">
+        <div class="container">
             <div class="logo-wrapper">
                 <div class="logo">
-                    <img src="./promocenter.png" alt="PromoCenter Logo">
+                    <img src="./promocenter-landing.webp" alt="PromoCenter Logo">
                 </div>
             </div>
 
-            <div class="badge"><i class="fas fa-bolt"></i> OFERTAS ATIVAS AGORA</div>
+            <div class="badge">OFERTAS ATIVAS AGORA</div>
 
             <div class="text">
                 <h4 class="title-main">
@@ -376,13 +281,13 @@ src="https://www.facebook.com/tr?id=1789144685108886&ev=PageView&noscript=1"
                     <div class="logo-lojas">
                         <a href="https://chat.whatsapp.com/GUjaqIUEruR4RHeVv8ZSjY" class="action-button"
                             data-element="whatsapp-logos-marcas-ml" data-page="landing-promocenter">
-                            <img src="./mercadolivre.webp" alt="Mercado Livre">
+                            <img src="./mercadolivre-landing.webp" alt="Mercado Livre">
                         </a>
                     </div>
                     <div class="logo-lojas">
                         <a href="https://chat.whatsapp.com/GUjaqIUEruR4RHeVv8ZSjY" class="action-button"
                             data-element="whatsapp-logos-marcas-shopee" data-page="landing-promocenter">
-                            <img src="./shopee.png" alt="Shopee">
+                            <img src="./shopee-landing.webp" alt="Shopee">
                         </a>
                     </div>
                     <div class="logo-lojas">
@@ -393,104 +298,21 @@ src="https://www.facebook.com/tr?id=1789144685108886&ev=PageView&noscript=1"
                     </div>
                 </div>
                 <div style="margin-top: 15px; font-size: 13px; color: #d1d1d1;">
-                    <i class="fas fa-check"></i> Ofertas de imperdíveis • <i class="fas fa-check"></i> Lojas Oficiais •
-                    <i class="fas fa-shield-alt"></i> 100% SEGURO
+                    Ofertas Imperdíveis • Lojas Oficiais • 100% SEGURO
                 </div>
             </div>
 
             <div class="buttons">
                 <a href="https://chat.whatsapp.com/GUjaqIUEruR4RHeVv8ZSjY" class="btn-whats action-button"
                     data-element="whatsapp-top" data-page="landing-promocenter">
-                    <i class="fab fa-whatsapp"></i>
                     ENTRAR NO <strong>GRUPO DO WHATSAPP</strong>
                 </a>
-            </div>
-
-            <div class="vagas">
-                <span id="vaga-header">
-                    <strong>👇 Promoções que está perdendo 👇</strong>
-                </span>
-            </div>
-
-            <div class="swiper mySwiper">
-                <div class="swiper-wrapper">
-                    <div class="swiper-slide">
-                        <a href="https://chat.whatsapp.com/GUjaqIUEruR4RHeVv8ZSjY" class="action-button"
-                            data-element="whatsapp-slider-1" data-page="landing-promocenter">
-                            <img src="./1.png" alt="Grupo VIP PromoCenter">
-                        </a>
-                    </div>
-                    <div class="swiper-slide">
-                        <a href="https://chat.whatsapp.com/GUjaqIUEruR4RHeVv8ZSjY" class="action-button"
-                            data-element="whatsapp-slider-6" data-page="landing-promocenter">
-                            <img src="./6.png" alt="Grupo VIP PromoCenter">
-                        </a>
-                    </div>
-                    <div class="swiper-slide">
-                        <a href="https://chat.whatsapp.com/GUjaqIUEruR4RHeVv8ZSjY" class="action-button"
-                            data-element="whatsapp-slider-3" data-page="landing-promocenter">
-                            <img src="./3.png" alt="Grupo VIP PromoCenter">
-                        </a>
-                    </div>
-                    <div class="swiper-slide">
-                        <a href="https://chat.whatsapp.com/GUjaqIUEruR4RHeVv8ZSjY" class="action-button"
-                            data-element="whatsapp-slider-4" data-page="landing-promocenter">
-                            <img src="./4.png" alt="Grupo VIP PromoCenter">
-                        </a>
-                    </div>
-                    <div class="swiper-slide">
-                        <a href="https://chat.whatsapp.com/GUjaqIUEruR4RHeVv8ZSjY" class="action-button"
-                            data-element="whatsapp-slider-5" data-page="landing-promocenter">
-                            <img src="./5.png" alt="Grupo VIP PromoCenter">
-                        </a>
-                    </div>
-                    <div class="swiper-slide">
-                        <a href="https://chat.whatsapp.com/GUjaqIUEruR4RHeVv8ZSjY" class="action-button"
-                            data-element="whatsapp-slider-2" data-page="landing-promocenter">
-                            <img src="./2.png" alt="Grupo VIP PromoCenter">
-                        </a>
-                    </div>
-                    <div class="swiper-slide">
-                        <a href="https://chat.whatsapp.com/GUjaqIUEruR4RHeVv8ZSjY" class="action-button"
-                            data-element="whatsapp-slider-7" data-page="landing-promocenter">
-                            <img src="./7.png" alt="Grupo VIP PromoCenter">
-                        </a>
-                    </div>
-                </div>
             </div>
         </div>
     </main>
 
-    <script src="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.js"></script>
-
-    <script>
-        var swiper = new Swiper(".mySwiper", {
-            slidesPerView: 3,
-            spaceBetween: 30,
-            autoplay: {
-                delay: 3500,
-                disableOnInteraction: false,
-            },
-            pagination: {
-                clickable: true,
-            },
-            breakpoints: {
-                0: {
-                    slidesPerView: 1.2,
-                    spaceBetween: 20,
-                },
-                768: {
-                    slidesPerView: 2.2,
-                },
-                1024: {
-                    slidesPerView: 3.2,
-                },
-            },
-        });
-    </script>
     <script>
         const BASEAPI = 'https://promocenter-bot.criandoumamenterica.com.br/api';
-        // const BASEAPI = 'http://127.0.0.1:8000/api';
 
         fetch(`${BASEAPI}/track-visit`, {
             method: 'POST',
